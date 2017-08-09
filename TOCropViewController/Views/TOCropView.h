@@ -100,6 +100,8 @@ typedef NS_ENUM(NSInteger, TOCropViewCroppingStyle) {
  Setting it to CGSizeZero will reset the aspect ratio to the image's own ratio.
  */
 @property (nonatomic, assign) CGSize aspectRatio;
+    @property (nonatomic, assign) CGSize originalAspectRatio;
+
 
 /**
  When the cropping box is locked to its current aspect ratio (But can still be resized)
