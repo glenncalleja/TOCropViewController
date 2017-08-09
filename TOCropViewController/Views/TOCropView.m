@@ -1318,6 +1318,7 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
 - (void)setAspectRatio:(CGSize)aspectRatio
 {
     [self setAspectRatio:aspectRatio animated:NO];
+    
 }
 
 - (void)setAspectRatio:(CGSize)aspectRatio animated:(BOOL)animated
@@ -1572,6 +1573,7 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
         }];
     }
     
+    [self setAspectRatio:self.originalCropBoxSize animated:true];
     [self checkForCanReset];
 }
 
