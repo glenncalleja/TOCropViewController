@@ -1317,7 +1317,6 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
 
 - (void)setAspectRatio:(CGSize)aspectRatio
 {
-    self.originalAspectRatio = aspectRatio;
     [self setAspectRatio:aspectRatio animated:NO];
     
 }
@@ -1325,7 +1324,7 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
 - (void)setAspectRatio:(CGSize)aspectRatio animated:(BOOL)animated
 {
     _aspectRatio = aspectRatio;
-    
+    self.originalAspectRatio = aspectRatio;
     // Will be executed automatically when added to a super view
     if (self.superview == nil) {
         return;
