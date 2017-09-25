@@ -1321,6 +1321,7 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
     
 }
 
+    
 - (void)setAspectRatio:(CGSize)aspectRatio animated:(BOOL)animated
 {
     _aspectRatio = aspectRatio;
@@ -1574,7 +1575,7 @@ typedef NS_ENUM(NSInteger, TOCropViewOverlayEdge) {
     }
     
     [self setAspectRatio:self.originalAspectRatio animated:false];
-    
+    self.scrollView.zoomScale = self.scrollView.minimumZoomScale;
     [self checkForCanReset];
 }
 
